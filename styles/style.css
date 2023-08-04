@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    --cor-background-light: linear-gradient(white, rgba(0, 238, 255, 0.6));
+    --cor-background-dark: linear-gradient(black, rgb(5, 0, 70));
+    --cor-background-container-light: white;
+    --cor-background-container-dark: rgba(1, 0, 22, 0.425);
+}
+
+body {
+    min-height: 100vh;
+    max-width: 100vw;
+    background-image: var(--cor-background-light);
+    /* background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+    transition: 0.3s;
+    color: black;
+}
+.dark-body {
+    /* modo dark */
+    background-image: var(--cor-background-dark);
+    color: white;
+}
+
+.music {
+    font-size: 2.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    margin: 0;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.bi {
+    font-size: 2.2rem;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+}
+.dark-body .bi {
+    /* modo dark */
+    display: none;
+}
+
+.bi-moon {
+    display: none;
+}
+.dark-body .bi-moon {
+    /* modo dark */
+    display: block;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#nomeusu {
+    border-radius: 10px;
+}
+
+#tema {
+    border-radius: 10px;
+}
+
+.btn {
+    border-width: 3px;
+    border-radius: 10px;
+    border-color: rgb(0, 238, 255);
+    color: rgb(0, 144, 155);
+    font-size: 1rem;
+    transition: 0.4s;
+    font-weight: 900;
+}
+.dark-body .btn {
+    /* modo dark */
+    border-color: rgb(12, 0, 173);
+    color: rgb(12, 0, 173);
+}
+
+.btn:hover {
+    border-color: rgb(0, 171, 184);
+    color: rgb(0, 86, 92);
+}
+.dark-body .btn:hover {
+    /* modo dark */
+    border-color: rgb(134, 123, 255);
+    background-color: rgb(5, 0, 61);
+    color: white;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+ul {
+    list-style: none;
+}
+form {
+    padding: 20px 0;
+}
+.title {
+    margin: 20px;
+}
+#container-pagina-inicial {
+    border-radius: 35px;
+    padding: 30px;
+    width: 800px;
+    max-width: 100vw;
+}
+
+.title {
+    text-align: center;
+}
+
+.form-inicial {
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 440px;
+    border-radius: 25px;
+    background-color: var(--cor-background-container-light);
+    box-shadow: 0 0 1em rgb(0, 238, 255);
+    max-width: 100vw;
+}
+/* modo dark */
+.dark-body .form-inicial,
+.dark-body .questionario,
+.dark-body .infos-rank {
+    background-color: var(--cor-background-container-dark);
+    box-shadow: 0 0 1em rgb(5, 0, 70);
+}
+
+#container-pagina-inicial input,
+#container-pagina-inicial select,
+#container-pagina-inicial button {
+    padding: 10px;
+    margin: 10px 0;
+}
+#container-pagina-inicial input,
+#container-pagina-inicial select {
+    border: 2px solid rgb(0, 151, 161);
+    border-radius: 10px;
+}
+.dark-body #container-pagina-inicial input,
+.dark-body #container-pagina-inicial select {
+    border: 2px solid rgb(5, 0, 70);
+}
+#container-pagina-inicial option {
+    background-color: rgb(0, 151, 161);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+.dark-body #container-pagina-inicial option {
+    background-color: rgb(5, 0, 70);
+}
+
+.display-none {
+    display: none;
+}
+
+.container {
+    margin: 0;
+    padding: 0px;
+    min-height: 100vh;
+}
+.relogio,
+.relogio-css,
+.relogio-javascript {
+    font-weight: 900;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.container h2 {
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+}
+.questionario h3,
+.questionario p {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.quiz-container label {
+    display: block;
+    padding: 5px 0;
+}
+.quiz-container {
+    border: 1px solid gray;
+    padding: 10px;
+    margin: 5px 0;
+    width: 800px;
+    border-radius: 10px;
+}
+
+.questionario {
+    height: 75vh;
+    padding: 10px;
+    overflow: auto;
+    margin-bottom: 20px;
+    background-color: var(--cor-background-container-light);
+    box-shadow: 0 0 1em rgb(0, 238, 255);
+}
+
+/* Estilizar a barra de rolagem vertical */
+.questionario::-webkit-scrollbar,
+.infos-rank::-webkit-scrollbar {
+    width: 1px;
+}
+
+.questionario::-webkit-scrollbar-track,
+.infos-rank::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.questionario::-webkit-scrollbar-thumb,
+.infos-rank::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+.botao-quiz {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#container-rank h1 {
+    text-align: center;
+    font-size: 45px;
+    padding: 25px;
+}
+
+.infos-rank {
+    background-color: var(--cor-background-container-light);
+    width: 800px;
+    height: 80vh;
+    overflow: auto;
+    box-shadow: 0 0 1em rgb(0, 238, 255);
+}
+
+.tabela-resultados,
+th {
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+}
+
+table {
+    margin-top: 30px;
+    margin-left: 45px;
+    border-spacing: 0;
+    text-align: center;
+}
+
+#resultados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#resultados h2 {
+    margin: 0;
+}
+#resultados table {
+    width: 600px;
+    border-collapse: collapse;
+    margin: 0;
+}
+#resultados th,
+#resultados td {
+    border: 1px solid black;
+    padding: 5px;
+}
+.dark-body #resultados th,
+.dark-body #resultados td {
+    border: 1px solid white;
+    padding: 5px;
+}
+
+#rankeamento {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+#rankeamento div h3 {
+    text-align: center;
+}
+
+#rankeamento ol {
+    list-style-position: inside; /* Coloca a numeração dentro do espaço da div */
+}
+
+.acertou {
+    background-color: rgb(61, 160, 61);
+}
+.dark-body .acertou {
+    color: black;
+}
+
+.errou {
+    background-color: rgb(167, 50, 50);
+    color: white;
+}
+.concluir-container button {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+}
+
+#acertos {
+    margin-top: 20px;
+    color: rgb(54, 165, 54);
+    font-size: 20px;
+    text-align: center;
+}
+
+#erros {
+    margin: 20px 0;
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}
